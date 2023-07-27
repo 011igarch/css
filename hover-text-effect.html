@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Underline Hover Effect</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: monospace;
+      font-size: 2rem;
+      background-color: #111;
+      color: white;
+      padding: 1rem;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    li {
+      margin-right: 2rem;
+    }
+
+    a.underline-hover-effect {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .underline-hover-effect {
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .underline-hover-effect::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      /* right: 0; */
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: rgb(0, 255, 0);
+      /* background-image: linear-gradient(to right, green, red); */
+      transition: width 0.25s ease-out;
+    }
+    .underline-hover-effect:hover::before {
+      width: 100%;
+      /* left: 0;
+      right: auto; */
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="#" class="underline-hover-effect">Link 1</a></li>
+    <li><a href="#" class="underline-hover-effect">Link 2</a></li>
+    <li><a href="#" class="underline-hover-effect">Link 3</a></li>
+  </ul>
+  <p class="underline-hover-effect">Hover over this text</p>
+
+  <a href="#" class="underline-hover-effect">Hover over this anchor</a>
+
+</body>
+</html>
