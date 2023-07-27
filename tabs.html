@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs only HTML CSS</title>
+    <style>
+      body {
+        background-color: #ccc;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      .mytabs {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 25px;
+      }
+
+      .mytabs input[type="radio"] {
+        display: none;
+      }
+
+      .mytabs label {
+        padding: 25px;
+        background: #e2e2e2;
+        font-weight: bold;
+      }
+
+      .mytabs .tab {
+        width: 100%;
+        padding: 20px;
+        background: #fff;
+        order: 1;
+        display: none;
+      }
+
+      .mytabs .tab h2 {
+        font-size: 1.5rem;
+      }
+
+      /* Wenn .mytabs input[type="radio"]:checked > darauf folgt label und > darauf folgt .tab, dann sei display: block*/
+      .mytabs input[type='radio']:checked + label + .tab {
+        display: block;
+      }
+
+      .mytabs input[type='radio']:checked + label {
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mytabs">
+      <input type="radio" name="mytabs" id="tabfree" checked="checked" />
+      <label for="tabfree">Free</label>
+      <div class="tab">
+        <h2>Free</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+          corrupti ratione amet! Sed exercitationem commodi impedit amet
+          accusamus et sit officia, debitis laborum recusandae reiciendis iusto
+          cumque unde earum assumenda tempora eius sequi. Tempora molestiae
+          illum mollitia cumque adipisci exercitationem quos illo pariatur
+          repellendus iure quaerat, nisi ipsa numquam optio?
+        </p>
+      </div>
+
+      <input type="radio" name="mytabs" id="tabsilber" />
+      <label for="tabsilber">Silber</label>
+      <div class="tab">
+        <h2>Silber</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+          corrupti ratione amet! Sed exercitationem commodi impedit amet
+          accusamus et sit officia, debitis laborum recusandae reiciendis iusto
+          cumque unde earum assumenda tempora eius sequi. Tempora molestiae
+          illum mollitia cumque adipisci exercitationem quos illo pariatur
+          repellendus iure quaerat, nisi ipsa numquam optio?
+        </p>
+      </div>
+
+      <input type="radio" name="mytabs" id="tabgold" />
+      <label for="tabgold">Gold</label>
+      <div class="tab">
+        <h2>Gold</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis saepe cumque natus error id laborum, ipsum animi architecto temporibus recusandae, nisi laboriosam hic commodi itaque deserunt. Recusandae cum quia autem placeat corporis exercitationem illo culpa, sed ad in repellendus voluptatibus cumque omnis. Asperiores, nisi. Ipsum ad itaque inventore cupiditate quibusdam, maxime cumque rem ut consequatur maiores laborum doloribus debitis accusamus consequuntur ipsam voluptatem voluptate vero quo culpa ratione voluptates suscipit provident at ducimus? Voluptatum commodi totam eius possimus deleniti nemo incidunt, aliquid officia excepturi, placeat, exercitationem dignissimos explicabo. Ad, molestiae? Ea nemo quod a enim provident at corporis, vitae dignissimos.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
